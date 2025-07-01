@@ -1,0 +1,294 @@
+/* ========== MAIN WRAPPER ========== */
+.portal-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #dce6ef, #8f9fad);
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+  }
+  
+  /* ========== TITLE ========== */
+  .portal-wrapper h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+    color: #111;
+  }
+  
+  /* ========== PORTAL CARD CONTAINER ========== */
+  .portal-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  
+  @media (max-width: 600px) {
+    .portal-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  
+  /* ========== INDIVIDUAL CARD ========== */
+  .portal-card {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .portal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  .portal-card h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #111;
+  }
+  
+  .portal-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .portal-card button {
+    background-color: #18124b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .portal-card button:hover {
+    background-color: #2d1d89;
+  }
+  
+  /* ========== LOGIN POPUP ========== */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    backdrop-filter: blur(5px);
+  }
+  
+  .login-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 40px 30px;
+    z-index: 1000;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 400px;
+    color: #fff;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .login-popup h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #fff;
+  }
+  
+  /* ========== INPUTS ========== */
+  .login-popup input {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    outline: none;
+    font-weight: 500;
+  }
+  
+  .login-popup input::placeholder {
+    color: #eee;
+  }
+  
+  .login-popup input:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+  }
+  
+  /* ========== BUTTONS ========== */
+  .login-popup button {
+    padding: 12px 24px;
+    border-radius: 12px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0 8px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .login-popup button:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+  }
+  
+  .login-popup button:first-of-type {
+    background-color: #2d1d89;
+    color: #fff;
+  }
+  
+  .login-popup button:first-of-type:hover {
+    background-color: #18124b;
+  }
+  
+  .login-popup .close-btn {
+    background-color: #fff;
+    color: #111;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+  
+  .login-popup .close-btn:hover {
+    background-color: #eee;
+  }
+  
+  /* ========== SAMPLE CREDS ========== */
+  .sample-creds {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #ddd;
+  }
+  
+  /* ========== DARK MODE ========== */
+  .portal-wrapper.dark {
+    background: linear-gradient(to right, #1e1e2f, #2d2d4d);
+    color: #eee;
+  }
+  
+  .portal-wrapper.dark h2  {
+    color: #fff;
+  }
+  .portal-wrapper.dark h1  {
+    color: #fff;
+  }
+  
+  .portal-wrapper.dark .portal-card {
+    background: #2c2c3e;
+    color: #fff;
+  }
+  
+  .portal-wrapper.dark .portal-card p {
+    color: #ccc;
+  }
+  
+  .portal-wrapper.dark .portal-card button {
+    background-color: #4b3cff;
+  }
+  
+  .portal-wrapper.dark .portal-card button:hover {
+    background-color: #372ab2;
+  }
+  
+  .portal-wrapper.dark .login-popup {
+    background: rgba(50, 50, 70, 0.85);
+  }
+  
+  .portal-wrapper.dark .login-popup input {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+  
+  .portal-wrapper.dark .login-popup input::placeholder {
+    color: #aaa;
+  }
+  
+  .portal-wrapper.dark .login-popup .close-btn {
+    background-color: #fff;
+    color: #111;
+  }
+  
+  .portal-wrapper.dark .login-popup .close-btn:hover {
+    background-color: #eee;
+  }
+  
+  .portal-wrapper.dark .sample-creds {
+    color: #ccc;
+  }
+  
+  /* ========== DARK MODE TOGGLE BUTTON ========== */
+  .dark-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #18124b;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 1001;
+    transition: background 0.3s ease;
+  }
+  
+  .dark-toggle:hover {
+    background: #2d1d89;
+  }
+  
+  /* ========== ANIMATIONS ========== */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -45%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .login-popup .button-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  
+  
+  

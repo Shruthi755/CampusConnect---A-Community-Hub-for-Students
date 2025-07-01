@@ -1,0 +1,129 @@
+/* Modern but clean CSS */
+.announcements-container {
+    max-width: 800px;
+    margin: 6rem auto;
+    padding: 0 1rem;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+  }
+  .navbar-color{
+    background: #2b6cb0;
+    line-height: 3rem;
+  }
+  .announcements-header {
+    color: #1a365d;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2.2rem;
+    position: relative;
+  }
+  
+  .announcements-header::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #3182ce, #63b3ed);
+    margin: 1rem auto 0;
+  }
+  
+  .announcements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .announcement-card {
+    display: flex;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-left: 4px solid #3182ce;
+  }
+  
+  .announcement-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-icon {
+    background: #ebf8ff;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    color: #3182ce;
+  }
+  
+  .card-content {
+    padding: 1.5rem;
+    flex: 1;
+  }
+  
+  .card-content h2 {
+    margin: 0 0 0.5rem 0;
+    color: #2d3748;
+    font-size: 1.3rem;
+  }
+  
+  .card-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .date {
+    color: #718096;
+  }
+  
+  .category {
+    background: #ebf8ff;
+    color: #3182ce;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.8rem;
+  }
+  
+  .card-content p {
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .read-more {
+    background: none;
+    border: none;
+    color: #3182ce;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.2s ease;
+  }
+  
+  .read-more:hover {
+    color: #2b6cb0;
+  }
+  
+  .read-more .arrow {
+    transition: transform 0.2s ease;
+  }
+  
+  .read-more:hover .arrow {
+    transform: translateX(3px);
+  }
+  
+  @media (max-width: 768px) {
+    .announcement-card {
+      flex-direction: column;
+    }
+    
+    .card-icon {
+      justify-content: center;
+    }
+  }

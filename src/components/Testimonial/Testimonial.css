@@ -1,0 +1,368 @@
+/* Testimonials.css */
+
+/* Base Styles */
+.testimonials-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-top: 100px;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #1a3a8f, #0d2252);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 20px 0 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* Featured Testimonials */
+.featured-testimonials {
+  margin: 50px 0;
+}
+
+.featured-testimonials h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #1a3a8f;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.featured-testimonials h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #1a3a8f;
+  margin: 15px auto 0;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  
+}
+
+.featured-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.featured-card:hover {
+  transform: translateY(-5px);
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.testimonial-image {
+  height: 250px;
+  overflow: hidden;
+}
+
+.testimonial-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.rating {
+  color: #ffc107;
+  margin-bottom: 15px;
+}
+
+
+.testimonial-content blockquote {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.author-info {
+  margin-top: auto;
+}
+
+.author-info h3 {
+  margin: 0;
+  color: #1a3a8f;
+}
+
+.author-info p {
+  margin: 5px 0 0;
+  color: #666;
+}
+
+.company {
+  font-weight: bold;
+  color: #1a3a8f !important;
+}
+
+/* Filter Controls */
+.filter-controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.filter-controls button {
+  padding: 8px 20px;
+  border: 2px solid #1a3a8f;
+  background: transparent;
+  color: #1a3a8f;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.filter-controls button:hover {
+  background: rgba(26, 58, 143, 0.1);
+}
+
+.filter-controls button.active {
+  background: #1a3a8f;
+  color: white;
+}
+
+/* Testimonials Grid */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: auto;         /* Ensure height adjusts to content */
+  min-height: unset;    /* Remove any forced minimum height */
+}
+
+
+.testimonial-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.testimonial-card.expanded {
+  grid-column: span 1;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+  border: 2px solid #1a3a8f;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.author h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #1a3a8f;
+}
+
+.author p {
+  margin: 3px 0 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.card-content blockquote {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #444;
+  
+}
+
+.read-more {
+  color: #1a3a8f;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 55px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.type-badge {
+  background: #eef2ff;
+  color: #1a3a8f;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.share-btn {
+  background: transparent;
+  border: none;
+  color: #1a3a8f;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Submit Testimonial Section */
+.submit-testimonial {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 40px 0;
+}
+
+.submit-container h2 {
+  color: #1a3a8f;
+  margin-bottom: 15px;
+}
+
+.submit-container p {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  color: #555;
+}
+
+.submit-btn {
+  background: #1a3a8f;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(26, 58, 143, 0.2);
+}
+
+.submit-btn:hover {
+  background: #0d2252;
+  transform: translateY(-2px);
+}
+
+/* Type-specific colors */
+.student .type-badge {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.alumni .type-badge {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.faculty .type-badge {
+  background: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.employer .type-badge {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-controls {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .filter-controls button {
+    width: 80%;
+  }
+}
